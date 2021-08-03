@@ -1,6 +1,8 @@
 FROM gitpod/workspace-full:latest
 
-# Install Xvfb, JavaFX-helpers and Openbox window manager
+# Install Xvfb, JavaFX-helpers and Openbox window manager and tkinter
+RUN sudo apt-get update -q \
+    && sudo apt-get install -yq tk-dev
 RUN sudo install-packages xvfb x11vnc xterm openjfx libopenjfx-java openbox
 
 # Overwrite this env variable to use a different window manager
