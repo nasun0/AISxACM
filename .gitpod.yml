@@ -1,6 +1,16 @@
 image:
     file: util/.gitpod.Dockerfile
 
+tasks:
+  - init: pip install gym
+    name: Recordings Server
+    command: python3 -m http.server 3000 -d "/workspace/AISxACM/recordings"
+    
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
 vscode:
-    extensions:
+    extensions:a
         - ms-python.python
