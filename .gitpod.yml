@@ -1,12 +1,10 @@
-image:
+ image:
     file: util/.gitpod.Dockerfile
 
 tasks:
     - name: Recordings Server
       init: pip install gym
         pip install pyglet
-        pip install stable-baselines
-        pip install tensorflow
       command: python3 -m http.server 3000 -d "/workspace/AISxACM/recordings"
 
     - name: for u <3
